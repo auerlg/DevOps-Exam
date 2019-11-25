@@ -18,11 +18,14 @@ Go trough the additional setup tasks.
 Create new item as pipeline (choose a name for your liking)
 Set up the project as follows: 
 Get a personal access token from github
+Set Poll SCM to:"* * * * *"
 Select Pipeline script from SCM in the Piplene definition settings
 Add your repository URL endig with .git
 Create a Github personal access token on https://github.com/settings/tokens
 Set your credentials for access to github:
 Add the created token with username and password=token text
+Set script path to: "Jenkinsfile"
+Click save.
 
 Label your master node as master and set to only build here if direcly specified.
 
@@ -30,13 +33,13 @@ Add your slave VM label it as slave and set to only build here if direcly specif
 Please connect to the slave vm via ssh (vagrant/vagrant). To get the SSH key to connect the slave node to Jenkins ssh into the VM and "cat /var/lib/jenkins/.ssh/id_rsa".
 Set the verifying strategy to non verifying.
 
-Change a line in the readme and commit to the repo to trigger a new build.
+Change a line in the readme and commit & push to the repo to trigger a new build.
 
 
 
 
-Jenkinsfile 
 
-Set Poll SCM to:"* * * * *"
+
+
 
 
