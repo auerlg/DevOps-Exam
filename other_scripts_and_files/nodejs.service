@@ -1,0 +1,13 @@
+[Unit]
+Description= nodejs with supervisor
+After=network-online.target
+
+[Service]
+Restart=on-failure
+Type=simple
+User=root
+ExecStart=/usr/bin/supervisor --watch /var/lib/jenkins/workspace/DevOps-Exam/other_scripts_and_files /var/lib/jenkins/workspace/DevOps-Exam/other_scripts_and_files/index.js
+
+
+[Install]
+WantedBy=multi-user.target
